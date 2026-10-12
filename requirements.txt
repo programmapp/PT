@@ -1,17 +1,5 @@
-# Umumiy
 google-genai>=1.0.0
 python-dotenv>=1.0.0
 edge-tts>=6.1.0
 requests>=2.31.0
-
-# Kompyuter (desktop) versiyasi uchun
-SpeechRecognition>=3.10.0
-PyAudio>=0.2.14
-pygame>=2.5.0
-psutil>=5.9.0
-Pillow>=10.0.0
-pyautogui>=0.9.54
-
-# Veb-server (portfolio) uchun
 Flask>=3.0.0
-flask-cors>=4.0.0
