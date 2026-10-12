@@ -1,0 +1,45 @@
+{
+  "owner_name": "Abdunosir",
+  "assistant_name": "TORNADO",
+  "city": "Tashkent",
+  "timezone_label": "Toshkent",
+
+  "use_wake_word": true,
+  "wake_words": ["tornado", "tornada", "tornadо", "торнадо", "торнейдо"],
+  "conversation_window_sec": 30,
+
+  "default_language": "uz",
+  "recognition_languages": { "uz": "uz-UZ", "ru": "ru-RU", "en": "en-US" },
+  "voices": {
+    "uz": "uz-UZ-SardorNeural",
+    "ru": "ru-RU-DmitryNeural",
+    "en": "en-US-BrianNeural"
+  },
+
+  "exit_phrases": ["xayr", "hayr", "xayr tornado", "bye", "goodbye", "до свидания", "пока", "dasturni yop", "dasturdan chiq"],
+  "sleep_phrases": ["jim bo'l", "jim bol", "dam ol", "uxla", "sleep", "замолчи", "помолчи"],
+
+  "apps": {
+    "chrome": "start chrome",
+    "google chrome": "start chrome",
+    "edge": "start msedge",
+    "firefox": "start firefox",
+    "telegram": "start tg://",
+    "notepad": "notepad.exe",
+    "bloknot": "notepad.exe",
+    "calculator": "calc.exe",
+    "kalkulyator": "calc.exe",
+    "vscode": "code",
+    "vs code": "code",
+    "explorer": "explorer.exe",
+    "paint": "mspaint.exe",
+    "word": "start winword",
+    "excel": "start excel",
+    "powerpoint": "start powerpnt",
+    "spotify": "start spotify:",
+    "settings": "start ms-settings:",
+    "sozlamalar": "start ms-settings:",
+    "task manager": "taskmgr.exe",
+    "terminal": "start wt"
+  }
+}
