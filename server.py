@@ -40,8 +40,8 @@ PORT = int(os.getenv("PORT", "8000"))
 HOST = os.getenv("HOST", "127.0.0.1")  # internetga chiqarganda HOST=0.0.0.0
 
 KNOWLEDGE_PATH = BASE / "portfolio_knowledge.json"
-PORTFOLIO_DIR = BASE.parent / "Portfolio"
-WIDGET_DIR = BASE.parent / "web"
+PORTFOLIO_DIR = BASE
+WIDGET_DIR = BASE
 
 VOICES = {
     "uz": "uz-UZ-SardorNeural",
