@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdunosir Safarov | Portfolio</title>
+    <meta name="description" content="Abdunosir Safarov — Cyber University 1-kurs talabasi.">
+    <meta name="theme-color" content="#060913">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23060913'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='%2300ffa3' font-family='monospace' font-weight='bold'%3E%26gt;_%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="langModal" class="lang-modal" role="dialog" aria-modal="true">
+        <div class="lang-modal-card">
+            <div class="lang-modal-icon"><i class="fa-solid fa-robot"></i></div>
+            <h2>Choose language / Til tanlang</h2>
+            <p class="lang-modal-sub">Portfolio &amp; TORNADO</p>
+            <div class="lang-modal-btns">
+                <button type="button" class="lang-btn" data-lang="uz"><span class="lang-flag">🇺🇿</span><span class="lang-name">O'zbekcha</span></button>
+                <button type="button" class="lang-btn" data-lang="ru"><span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span></button>
+                <button type="button" class="lang-btn" data-lang="en"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></button>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">CYBER<span>.CORE</span></div>
+        <ul class="nav-links">
+            <li class="nav-item active" data-target="home" tabindex="0" role="button" data-i18n="nav_home">Bosh sahifa</li>
+            <li class="nav-item" data-target="about" tabindex="0" role="button" data-i18n="nav_about">Men haqimda</li>
+            <li class="nav-item" data-target="skills" tabindex="0" role="button" data-i18n="nav_skills">Ko'nikmalar</li>
+            <li class="nav-item" data-target="projects" tabindex="0" role="button" data-i18n="nav_projects">Loyihalar</li>
+            <li class="nav-item" data-target="contact" tabindex="0" role="button" data-i18n="nav_contact">Aloqa</li>
+        </ul>
+        <button type="button" id="langSwitchBtn" class="lang-switch-btn" title="Language">
+            <i class="fa-solid fa-globe"></i> <span id="langSwitchLabel">UZ</span>
+        </button>
+    </nav>
+
+    <main class="main-container">
+        <section class="page-section active" id="home" data-tornado-section="home">
+            <div class="hero-wrapper animate-fade-up">
+                <span class="badge"><i class="fa-solid fa-graduation-cap"></i> <span data-i18n="hero_badge">Cyber University — 1-Kurs Talabasi</span></span>
+                <h1 data-i18n-html="hero_title">Kelajakni Kodlayotgan <br><span class="text-gradient">Raqobatbardosh Muhandis</span></h1>
+                <p data-i18n="hero_text">IT ekotizimi, startaplar va yuqori raqobatli muhitda o'z yo'lini yaratayotgan talaba.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="switchPage('projects')" data-i18n="btn_projects">Loyihalarimni ko'rish</button>
+                    <button class="btn btn-secondary" onclick="switchPage('contact')" data-i18n="btn_contact">Bog'lanish</button>
+                    <button class="btn btn-secondary" onclick="window.Tornado && Tornado.startTour()">
+                        <i class="fa-solid fa-robot"></i> <span data-i18n="btn_tour">TORNADO bilan tanishuv</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section" id="about" data-tornado-section="about">
+            <div class="about-grid">
+                <div class="about-img-container animate-fade-right">
+                    <div class="profile-avatar">
+                        <img src="profile.jpg" alt="Abdunosir Safarov" width="640" height="640">
+                    </div>
+                </div>
+                <div class="about-text animate-fade-left">
+                    <span class="badge" data-i18n="about_badge">Shaxsiyat</span>
+                    <h2>Abdunosir Safarov</h2>
+                    <p class="subtitle" data-i18n="about_subtitle">Cyber University talabasi &amp; Kelajak Startaperi</p>
+                    <p data-i18n="about_bio">Men Cyber University muhitidagi shiddatli raqobatni qadrlayman. Darslardan tashqari shaxsiy loyihalar ustida ishlayman. Maqsadim — real muammolarga biznes tomondan ham yechim topishdir.</p>
+                    <div class="personal-info-list">
+                        <div class="info-item"><i class="fa-solid fa-phone text-green"></i> <a href="tel:+998334282313">+998 (33) 428-23-13</a></div>
+                        <div class="info-item"><i class="fa-solid fa-envelope text-blue"></i> <a href="mailto:safarovabdunosir52@gmail.com">safarovabdunosir52@gmail.com</a></div>
+                        <div class="info-item"><i class="fa-solid fa-location-dot text-purple"></i> <span data-i18n="about_location">Cyber University, Toshkent</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section" id="skills" data-tornado-section="skills">
+            <div class="section-header">
+                <span class="badge" data-i18n="skills_badge">Kuchli Tomonlar</span>
+                <h2 data-i18n="skills_title">Texnik Bilimlar Tizimi</h2>
+                <p data-i18n="skills_desc">Hozirgi darajam. Har kuni o'rganib boryapman.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-percent="55" tabindex="0">
+                    <div class="skill-info"><div class="skill-meta"><i class="fa-brands fa-html5 text-orange"></i> <h3>HTML5 / CSS3</h3></div><span class="skill-percentage">0%</span></div>
+                    <div class="progress-bar"><span></span></div>
+                </div>
+                <div class="skill-card" data-percent="30" tabindex="0">
+                    <div class="skill-info"><div class="skill-meta"><i class="fa-brands fa-js text-yellow"></i> <h3>JavaScript</h3></div><span class="skill-percentage">0%</span></div>
+                    <div class="progress-bar"><span></span></div>
+                </div>
+                <div class="skill-card" data-percent="30" tabindex="0">
+                    <div class="skill-info"><div class="skill-meta"><i class="fa-brands fa-python text-blue"></i> <h3>Python</h3></div><span class="skill-percentage">0%</span></div>
+                    <div class="progress-bar"><span></span></div>
+                </div>
+                <div class="skill-card" data-percent="20" tabindex="0">
+                    <div class="skill-info"><div class="skill-meta"><i class="fa-solid fa-code text-purple"></i> <h3>C++</h3></div><span class="skill-percentage">0%</span></div>
+                    <div class="progress-bar"><span></span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section" id="projects" data-tornado-section="projects">
+            <div class="section-header">
+                <span class="badge" data-i18n="projects_badge">Portfolio</span>
+                <h2 data-i18n="projects_title">Loyihalarim</h2>
+                <p data-i18n="projects_desc">Shaxsiy loyihalarim. Birinchisini hoziroq sinab ko'ring.</p>
+            </div>
+            <article class="project-featured">
+                <div class="gallery">
+                    <a class="gallery-main" href="projects/hacker-terminal/index.html" target="_blank" rel="noopener">
+                        <img id="galleryMain" src="assets/hk-1.jpg" alt="Hacker Terminal" width="1440" height="900">
+                    </a>
+                    <div class="gallery-thumbs">
+                        <button type="button" class="thumb active" data-src="assets/hk-1.jpg" data-alt="1"><img src="assets/hk-1.jpg" alt="" loading="lazy"></button>
+                        <button type="button" class="thumb" data-src="assets/hk-2.jpg" data-alt="2"><img src="assets/hk-2.jpg" alt="" loading="lazy"></button>
+                        <button type="button" class="thumb" data-src="assets/hk-3.jpg" data-alt="3"><img src="assets/hk-3.jpg" alt="" loading="lazy"></button>
+                        <button type="button" class="thumb" data-src="assets/hk-4.jpg" data-alt="4"><img src="assets/hk-4.jpg" alt="" loading="lazy"></button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="p-icon"><i class="fa-solid fa-terminal text-green"></i></div>
+                    <h3 data-i18n="proj1_name">Hacker Terminal — xaker interfeysi simulyatori</h3>
+                    <p data-i18n="proj1_summary">Interaktiv xaker sayt: Matrix yomg'iri, konsol, qidiruv va Photo Manager.</p>
+                    <ul class="feature-list">
+                        <li data-i18n-html="proj1_f1"><i class="fa-solid fa-check text-green"></i> Matrix yomg'iri (Canvas)</li>
+                        <li data-i18n-html="proj1_f2"><i class="fa-solid fa-check text-green"></i> 20+ buyruqli konsol</li>
+                        <li data-i18n-html="proj1_f3"><i class="fa-solid fa-check text-green"></i> Avtomatik ma'lumot generatori</li>
+                        <li data-i18n-html="proj1_f4"><i class="fa-solid fa-check text-green"></i> Web Audio effektlari</li>
+                        <li data-i18n-html="proj1_f5"><i class="fa-solid fa-check text-green"></i> Photo Manager</li>
+                    </ul>
+                    <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Canvas API</span></div>
+                    <div class="project-actions">
+                        <a class="btn btn-primary" href="projects/hacker-terminal/index.html" target="_blank" rel="noopener"><span data-i18n="proj1_open">Demoni ochish</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <p class="demo-note"><i class="fa-solid fa-key"></i> <span data-i18n="proj1_code">Demo kodi: shadow protocol 7 (F2 yoki konsol).</span></p>
+                    <p class="demo-note"><i class="fa-solid fa-circle-info"></i> <span data-i18n="proj1_note">Simulyator: ismlar va pasportlar tasodifiy.</span></p>
+                </div>
+            </article>
+        </section>
+
+        <section class="page-section" id="contact" data-tornado-section="contact">
+            <div class="contact-wrapper">
+                <h2 data-i18n="contact_title">Men bilan aloqa</h2>
+                <p data-i18n="contact_desc">Networking yoki startap g'oyalar uchun yozing.</p>
+                <div class="social-box">
+                    <a href="https://t.me/Abdunosir_2007" target="_blank" rel="noopener" class="social-item telegram"><i class="fa-brands fa-telegram"></i> Telegram</a>
+                    <a href="https://instagram.com/Abdunosir_74.07" target="_blank" rel="noopener" class="social-item instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="https://www.linkedin.com/in/abdunosir-safarov-6a9805437" target="_blank" rel="noopener" class="social-item linkedin"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://wa.me/qr/7MRWS7XK5DTJE1" target="_blank" rel="noopener" class="social-item whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                </div>
+                <p style="margin-top:1.5rem">
+                    <button class="btn btn-primary" id="tornadoMsgBtn">
+                        <i class="fa-solid fa-robot"></i> <span data-i18n="btn_msg">TORNADO orqali xabar qoldirish</span>
+                    </button>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+      (function () {
+        var s = document.createElement('script');
+        s.src = 'tornado-widget.js';
+        s.dataset.api = (location.port === '5500' || location.port === '5501') ? 'http://127.0.0.1:8000' : '';
+        s.dataset.owner = 'Abdunosir';
+        s.dataset.autogreet = 'false';
+        s.dataset.theme = 'dark';
+        document.body.appendChild(s);
+      })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+{
+  "_eslatma": "Bu fayl TORNADO'ning portfolio haqidagi BARCHA bilimi. Bu yerda yozilmagan narsani TORNADO o'ylab topmaydi.",
+  "owner": {
+    "name": "Abdunosir Safarov",
+    "role": "Cyber University (Toshkent) 1-kurs talabasi, kelajak startaperi, dasturchi",
+    "location": "Cyber University, Toshkent",
+    "bio": "Cyber University muhitidagi shiddatli raqobatni qadrlayman. Darslardan tashqari shaxsiy loyihalar ustida ishlayman. Maqsadim — real muammolarga biznes tomondan ham yechim topishdir.",
+    "languages": [
+      "O'zbek",
+      "Rus",
+      "Ingliz"
+    ],
+    "skills": [
+      "HTML5 / CSS3 (55%)",
+      "JavaScript (30%)",
+      "Python (30%)",
+      "C++ (20%)"
+    ],
+    "available_for": "Networking, startap g'oyalarni muhokama qilish, frilans va hamkorlik takliflari",
+    "contact": {
+      "phone": "+998 (33) 428-23-13",
+      "email": "safarovabdunosir52@gmail.com",
+      "telegram": "https://t.me/Abdunosir_2007",
+      "instagram": "https://instagram.com/Abdunosir_74.07",
+      "linkedin": "https://www.linkedin.com/in/abdunosir-safarov-6a9805437",
+      "whatsapp": "https://wa.me/qr/7MRWS7XK5DTJE1"
+    }
+  },
+  "projects": [
+    {
+      "id": "hacker-terminal",
+      "name": "Hacker Terminal — xaker interfeysi simulyatori",
+      "summary": "Interaktiv 'xaker' sayt: Matrix yomg'iri (Canvas), 20+ buyruqli konsol (nmap, trace, sniff, decrypt va boshqalar), ism/pasport bo'yicha 100 tagacha yozuv yaratuvchi generator, Web Audio tovush effektlari, jins va yosh bo'yicha Photo Manager. Demo kodi: shadow protocol 7 (F2 yoki konsolga yozing).",
+      "tech": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Canvas API",
+        "Web Audio API",
+        "IndexedDB"
+      ],
+      "link": "projects/hacker-terminal/index.html",
+      "note": "Bu simulyator: barcha ism, pasport va manzillar tasodifiy to'qiladi va hech kimga tegishli emas."
+    },
+    {
+      "id": "tornado",
+      "name": "TORNADO — shaxsiy sun'iy intellekt",
+      "summary": "Abdunosir yaratgan shaxsiy AI yordamchi. Ovozli buyruqlarni tushunadi, o'zbek/rus/ingliz tillarida gaplashadi, kompyuterni boshqaradi (dastur ochish, ob-havo, eslatma, ekranni tahlil qilish va h.k.) va portfolio mehmonlarini kutib oladi, savollariga javob beradi, portfolioni taqdim etadi.",
+      "tech": [
+        "Python",
+        "Google Gemini",
+        "edge-tts",
+        "Web Speech API",
+        "JavaScript",
+        "Flask"
+      ],
+      "link": "#"
+    }
+  ],
+  "sections": [
+    {
+      "id": "home",
+      "title": "Bosh sahifa",
+      "describes": "Mehmonni kutib olish, egasi kimligi va asosiy xabar.",
+      "tour": {
+        "uz": "Assalomu alaykum! Bu Abdunosir Safarovning portfolio sayti. U Toshkentdagi Cyber Universityda birinchi kursda o'qiydi. Men uning shaxsiy yordamchisi — TORNADOman.",
+        "ru": "Здравствуйте! Это портфолио Абдуносира Сафарова. Он учится на первом курсе Cyber University в Ташкенте. Я его личный помощник — TORNADO.",
+        "en": "Hello! This is Abdunosir Safarov's portfolio. He is a first-year student at Cyber University in Tashkent. I am TORNADO, his personal assistant."
+      }
+    },
+    {
+      "id": "about",
+      "title": "Men haqimda",
+      "describes": "Abdunosirning qisqacha tarjimai holi, maqsadi va aloqa ma'lumotlari.",
+      "tour": {
+        "uz": "Abdunosir Safarov — Toshkentdagi Cyber University birinchi kurs talabasi. U raqobatni yaxshi ko'radi, shaxsiy loyihalar ustida ishlaydi. Maqsadi — nafaqat kod yozish, balki real muammolarga biznes yechim topish. Telefon: +998 33 428-23-13.",
+        "ru": "Абдуносир Сафаров — студент первого курса Cyber University в Ташкенте. Любит конкуренцию, работает над личными проектами. Цель — не только код, но и бизнес-решения. Телефон: +998 33 428-23-13.",
+        "en": "Abdunosir Safarov is a first-year student at Cyber University in Tashkent. He values competition and works on personal projects. Goal: not only code, but business solutions. Phone: +998 33 428-23-13."
+      }
+    },
+    {
+      "id": "skills",
+      "title": "Ko'nikmalar",
+      "describes": "Texnik bilimlar: HTML/CSS, JavaScript, Python, C++.",
+      "tour": {
+        "uz": "Hozirgi daraja: HTML va CSS — 55 foiz, JavaScript — 30 foiz, Python — 30 foiz, C plus plus — 20 foiz. Har kuni o'rganib, oshirib boryapti.",
+        "ru": "Текущий уровень: HTML и CSS — 55 процентов, JavaScript — 30, Python — 30, C plus plus — 20. Учится каждый день.",
+        "en": "Current level: HTML and CSS at 55 percent, JavaScript 30, Python 30, C plus plus 20. Learning every day."
+      }
+    },
+    {
+      "id": "projects",
+      "title": "Loyihalar",
+      "describes": "Asosiy loyihalar: Hacker Terminal simulyatori va TORNADO AI.",
+      "tour": {
+        "uz": "Asosiy loyiha — Hacker Terminal: Matrix yomg'iri, 20+ buyruqli konsol, qidiruv, Photo Manager. Demo kodi: shadow protocol 7. Ikkinchi muhim loyiha — men o'zim, TORNADO. Meni Abdunosir noldan yaratgan.",
+        "ru": "Главный проект — Hacker Terminal: Matrix-дождь, консоль с 20+ командами, поиск, Photo Manager. Код демо: shadow protocol 7. Второй важный проект — я сам, TORNADO. Меня создал Абдуносир с нуля.",
+        "en": "Main project — Hacker Terminal: Matrix rain, console with 20+ commands, search, Photo Manager. Demo code: shadow protocol 7. Second major project is me, TORNADO, built from scratch by Abdunosir."
+      }
+    },
+    {
+      "id": "contact",
+      "title": "Aloqa",
+      "describes": "Bog'lanish yo'llari: Telegram, Instagram, LinkedIn, WhatsApp, telefon, email.",
+      "tour": {
+        "uz": "Abdunosir bilan bog'lanish: Telegram @Abdunosir_2007, Instagram, LinkedIn, WhatsApp, telefon +998 33 428-23-13 yoki email. Xohlasangiz, xabaringizni men Telegram orqali yetkazaman — 'Xabar qoldirish' tugmasini bosing.",
+        "ru": "Связь с Абдуносиром: Telegram @Abdunosir_2007, Instagram, LinkedIn, WhatsApp, телефон +998 33 428-23-13 или email. Если хотите, я передам сообщение через Telegram — нажмите «Оставить сообщение».",
+        "en": "Contact Abdunosir: Telegram @Abdunosir_2007, Instagram, LinkedIn, WhatsApp, phone +998 33 428-23-13 or email. If you like, I can forward your message via Telegram — press 'Leave a message'."
+      }
+    }
+  ],
+  "faq": [
+    {
+      "q": "TORNADO nima?",
+      "a": "Abdunosir yaratgan shaxsiy sun'iy intellekt yordamchisi. Kompyuterda ovoz bilan boshqariladi (dastur ochish, ob-havo, eslatma, ekran tahlili), portfolioda esa mehmonlarni kutib oladi, portfolioni taqdim etadi va savollarga javob beradi."
+    },
+    {
+      "q": "Abdunosir qayerda o'qiydi?",
+      "a": "Toshkentdagi Cyber Universityda 1-kurs talabasi."
+    },
+    {
+      "q": "Qanday loyihalar bor?",
+      "a": "Hacker Terminal — interaktiv xaker simulyatori (Matrix, konsol, qidiruv, Photo Manager). Va TORNADO — shaxsiy AI yordamchi."
+    },
+    {
+      "q": "Hacker Terminal demo kodi nima?",
+      "a": "shadow protocol 7. Konsolga yozing yoki F2 ni bosing."
+    },
+    {
+      "q": "Qanday bog'lanish mumkin?",
+      "a": "Telegram: @Abdunosir_2007, telefon: +998 33 428-23-13, email: safarovabdunosir52@gmail.com, Instagram, LinkedIn va WhatsApp orqali."
+    },
+    {
+      "q": "Qanday tillarda gaplashadi?",
+      "a": "O'zbek, rus va ingliz tillarida."
+    }
+  ]
+}
