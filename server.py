@@ -446,7 +446,7 @@ def tts():
     body = request.get_json(silent=True) or {}
     text = clean(body.get("text"), 700)
     lang = body.get("lang") if body.get("lang") in VOICES else "uz"
-        text = pronounce_for_tts(text, lang)
+    text = pronounce_for_tts(text, lang)
     if not text:
         return jsonify(error="empty"), 400
     key = f"{lang}:{text}"
