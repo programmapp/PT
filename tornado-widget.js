@@ -571,10 +571,16 @@ select{background:var(--bg2);color:var(--fg);border:1px solid var(--line);border
       scrollToSection(step.section);
       ui.tourText.textContent = text;
       addMsg('bot', text);
-      const skip = waitSkip();
-      const body = muted ? sleep(Math.max(3000, text.length * 60)) : speak(text, lang);
+            const skip = waitSkip();
+      const minMs = Math.max(3500, Math.min(text.length * 70, 18000));
+      const body = (async () => {
+        const t0 = Date.now();
+        if (!muted) await speak(text, lang);
+        const left = Math.max(0, minMs - (Date.now() - t0));
+        if (left > 0) await sleep(left);
+      })();
       await Promise.race([body, skip]);
-      if (tourRunning && !muted) await Promise.race([sleep(500), skip]);
+      if (tourRunning && !muted) await Promise.race([sleep(400), skip]);
     }
 
     const completed = tourRunning;
