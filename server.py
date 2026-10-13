@@ -119,26 +119,68 @@ def detect_lang(text: str) -> str:
     return "uz"
 
 
-def pronounce_for_tts(text: str) -> str:
-    """HTML, CSS, Python, JavaScript va Cyber University to'g'ri talaffuz."""
+def pronounce_for_tts(text: str, lang: str = "uz") -> str:
+    """Texnik so'zlarni chiroyli talaffuz qilish (harfma-harf emas)."""
     if not text:
         return text
-    pairs = [
-        (r"\bHTML5\b", "H T M L five"),
-        (r"\bHTML\b", "H T M L"),
-        (r"\bCSS3\b", "C S S three"),
-        (r"\bCSS\b", "C S S"),
-        (r"\bJavaScript\b", "JavaScript"),
-        (r"\bjavascript\b", "JavaScript"),
-        (r"\bPython\b", "Python"),
-        (r"\bC\+\+\b", "C plus plus"),
-        (r"\bIndexedDB\b", "Indexed D B"),
-        (r"\bWeb Audio(?: API)?\b", "Web Audio"),
-        (r"\bCanvas(?: API)?\b", "Canvas"),
-    ]
+    # Tilga qarab fonetik almashtirish
+    if lang == "ru":
+        pairs = [
+            (r"\bTORNADO\b", "Торнадо"),
+            (r"\bTornado\b", "Торнадо"),
+            (r"\bportfolio\b", "портфолио"),
+            (r"\bPortfolio\b", "Портфолио"),
+            (r"\bCyber University\b", "Сайбер Юниверсийтий"),
+            (r"\bCyber Universty\b", "Сайбер Юниверсийтий"),
+            (r"\bHTML5\b", "эйч ти эм эль пять"),
+            (r"\bHTML\b", "эйч ти эм эль"),
+            (r"\bCSS3\b", "си эс эс три"),
+            (r"\bCSS\b", "си эс эс"),
+            (r"\bJavaScript\b", "джаваскрипт"),
+            (r"\bjavascript\b", "джаваскрипт"),
+            (r"\bPython\b", "питон"),
+            (r"\bC\+\+\b", "си плюс плюс"),
+            (r"\bAbdunosir\b", "Абдуносир"),
+            (r"\bSafarov\b", "Сафаров"),
+        ]
+    elif lang == "en":
+        pairs = [
+            (r"\bTORNADO\b", "Tornado"),
+            (r"\bCyber University\b", "Cyber University"),
+            (r"\bCyber Universty\b", "Cyber University"),
+            (r"\bHTML5\b", "H T M L 5"),
+            (r"\bHTML\b", "H T M L"),
+            (r"\bCSS3\b", "C S S 3"),
+            (r"\bCSS\b", "C S S"),
+            (r"\bJavaScript\b", "JavaScript"),
+            (r"\bPython\b", "Python"),
+            (r"\bC\+\+\b", "C plus plus"),
+        ]
+    else:  # uz
+        pairs = [
+            (r"\bTORNADO\b", "Tornado"),
+            (r"\bTornado\b", "Tornado"),
+            (r"\bportfolio\b", "portfoliyo"),
+            (r"\bPortfolio\b", "Portfoliyo"),
+            (r"\bCyber University\b", "Sayber Yuniversity"),
+            (r"\bCyber Universty\b", "Sayber Yuniversity"),
+            (r"\bHTML5\b", "eych ti em el besh"),
+            (r"\bHTML\b", "eych ti em el"),
+            (r"\bCSS3\b", "si es es uch"),
+            (r"\bCSS\b", "si es es"),
+            (r"\bJavaScript\b", "java skript"),
+            (r"\bjavascript\b", "java skript"),
+            (r"\bPython\b", "payton"),
+            (r"\bC\+\+\b", "si plus plus"),
+            (r"\bIndexedDB\b", "indeksed di bi"),
+            (r"\bWeb Audio(?: API)?\b", "web audio"),
+            (r"\bCanvas(?: API)?\b", "kanvas"),
+            (r"\bAbdunosir\b", "Abdunosir"),
+            (r"\bSafarov\b", "Safarov"),
+        ]
     out = text
     for pat, rep in pairs:
-        out = re.sub(pat, rep, out)
+        out = re.sub(pat, rep, out, flags=re.IGNORECASE if lang != "ru" else 0)
     return out
 
 
@@ -404,7 +446,7 @@ def tts():
     body = request.get_json(silent=True) or {}
     text = clean(body.get("text"), 700)
     lang = body.get("lang") if body.get("lang") in VOICES else "uz"
-    text = pronounce_for_tts(text)
+        text = pronounce_for_tts(text, lang)
     if not text:
         return jsonify(error="empty"), 400
     key = f"{lang}:{text}"
