@@ -572,7 +572,7 @@ select{background:var(--bg2);color:var(--fg);border:1px solid var(--line);border
       ui.tourText.textContent = text;
       addMsg('bot', text);
             const skip = waitSkip();
-      const minMs = Math.max(3500, Math.min(text.length * 70, 18000));
+            const minMs = Math.max(2000, Math.min(text.length * 42, 8000));
       const body = (async () => {
         const t0 = Date.now();
         if (!muted) await speak(text, lang);
